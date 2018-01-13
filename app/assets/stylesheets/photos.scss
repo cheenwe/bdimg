@@ -1,0 +1,51 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.imglist{ margin:0 auto; overflow:hidden}
+ul.imglist li{ float:left; padding:4px 8px; width:320px}
+ul.imglist li img{height: 345px; width:100%;}
+ul.imglist li span{ display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 12px;
+    border-radius: 0;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pagination > a {
+    padding: 8px 14px;
+    margin-left: 0;
+    color: #777777;
+    border-bottom: 1px solid #42c379;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+.pagination > em, .pagination > em:focus, .pagination > em:hover {
+    padding: 8px 14px;
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #42c379;
+    border-bottom: 1px solid #42c379;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.a_contact_form .form-group .fa {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    color: #d5d5d5;
+}
+.a_h5 >a {
+      margin: 10px;
+}

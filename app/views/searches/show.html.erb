@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<td><%= link_to '检索', photo_search_path, method: :post %></td>
+<td><%= link_to '下载全部', download_search_path, method: :post %></td>
+<td><%= link_to '清空照片', delete_search_path, method: :post %></td>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @search.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @search.number %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @search.total %>
+</p>
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>
+
+
+<%= will_paginate @photos %>
+
+
+<ul class="imglist">
+
+    <% @photos.each do |photo| %>
+
+        <li>
+            <a href="#" target="_blank">
+               <img src="<%= photo.url %>" />
+               <span><%= photo.id %></span>
+            </a>
+        </li>
+
+    <% end %>
+</ul>
+
+
+<%= will_paginate @photos %>
