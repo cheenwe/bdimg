@@ -32,6 +32,7 @@ git clone https://github.com/cheenwe/bdimg.git
 cd bdimg
 bundle install
 rails db:seed
+sidekiq -C config/sidekiq.yml &
 rails s
 ```
 访问: localhost:3000
