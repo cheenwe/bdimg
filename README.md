@@ -15,6 +15,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 
 sudo apt-get install -y redis-server \
                         postgresql-9.4 \
+                        libpq-dev\
                         ruby2.4 \
                         ruby2.4-dev
 
@@ -31,7 +32,12 @@ bundle config mirror.https://rubygems.org https://ruby.taobao.org
 git clone https://github.com/cheenwe/bdimg.git
 cd bdimg
 bundle install
-rails db:seed
+rails db:setup
+ 
+sudo service postgresql start
+sudo service redis-server start
+
+
 sidekiq -C config/sidekiq.yml &
 rails s
 ```

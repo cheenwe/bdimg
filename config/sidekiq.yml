@@ -1,7 +1,7 @@
 ---
 :verbose: false
 # :concurrency: 5 # 并发数
-:concurrency: 30
+:concurrency: 50
 :timeout: 3
 
 :pidfile: tmp/pids/sidekiq.pid
