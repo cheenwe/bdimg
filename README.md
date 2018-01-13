@@ -19,6 +19,10 @@ sudo apt-get install -y redis-server \
                         ruby2.4 \
                         ruby2.4-dev
 
+
+sudo service postgresql start
+sudo service redis-server start
+
 sudo su postgres -c "createuser -d -R -S $USER"
 
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
@@ -33,12 +37,8 @@ git clone https://github.com/cheenwe/bdimg.git
 cd bdimg
 bundle install
 rails db:setup
- 
-sudo service postgresql start
-sudo service redis-server start
-
-
-sidekiq -C config/sidekiq.yml &
+sidekiq -C config/sidekiq.yml
+#打开新的终端执行
 rails s
 ```
 访问: localhost:3000
